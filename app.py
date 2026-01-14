@@ -20,8 +20,8 @@ st.title("🛠️ Civic Issue Detection & Prioritization")
 # -----------------------------
 @st.cache_resource
 def load_models():
-    text_model = joblib.load("text_issue_classifier.joblib")
-    image_model = load_model("civic_issue_model.h5")
+    text_model = joblib.load("artifacts/text_issue_classifier.joblib")
+    image_model = load_model("artifacts/civic_issue_model.h5")
     return text_model, image_model
 
 text_model, image_model = load_models()
